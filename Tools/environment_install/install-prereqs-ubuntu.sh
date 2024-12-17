@@ -145,6 +145,7 @@ else
     fi
 fi
 
+
 # Check whether the specific ARM pkg-config package is available or whether we should emulate the effect of installing it.
 # Check if we need to manually install libtool-bin
 ARM_PKG_CONFIG_NOT_PRESENT=0
@@ -514,7 +515,7 @@ if [[ $SKIP_AP_GIT_CHECK -ne 1 ]]; then
   if [ -d ".git" ]; then
     heading "Update git submodules"
     cd $ARDUPILOT_ROOT
-    git submodule update --init --recursive
+    sudo git submodule update --init --recursive
     echo "Done!"
   fi
 fi
